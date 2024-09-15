@@ -3,19 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Visualizador EPUB</title>
+  <title>Visor EPUB</title>
   <style>
     #reader {
       width: 100%;
-      height: 100vh;
+      height: 100vh; /* Tamaño completo de la ventana */
     }
   </style>
 </head>
 <body>
-  <div id="reader">Prueba de pruebas</div>
+  <div id="reader"></div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/epub.js/0.3.88/epub.min.js"></script>
   <script>
-    var book = ePub("1.epub"); // Cambia el nombre del archivo según corresponda
+    // Asegúrate de que la ruta del archivo EPUB sea correcta
+    var book = ePub("1.epub"); // Cambia "milibro.epub" por el nombre correcto
     var rendition = book.renderTo("reader", {
       width: "100%",
       height: "100%"
